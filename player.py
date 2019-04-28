@@ -20,7 +20,10 @@ def user_input_which_color(cards):
 
 
 def bot_play(cards, field):
-    return randint(0, len(sendables(cards, field)) - 1)
+    for index, card in enumerate(cards):
+        if is_sendable(card, field):
+            return index
+
 
 def bot_select_color_wild(cards, field, maxmin = 'max'):
     color_count = Counter([color[0] for color in cards])

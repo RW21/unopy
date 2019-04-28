@@ -139,23 +139,3 @@ class Game:
 
         self.new_turn()
 
-
-p1 = Player('bot', 'dare')
-p2 = Player('bot', 'robot')
-
-b = Deck()
-print(b)
-a = Game(b, [p1, p2])
-print(a.state)
-a.distribute(7)
-print(a.state)
-
-print('now:' + str(a.current_player))
-print(a.field)
-
-while len(a.deck) >= 0:
-    print(a.current_player)
-    print(a.state)
-    print(a.field)
-    a.play()
-    # time.sleep(1)
