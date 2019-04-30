@@ -49,6 +49,8 @@ class TestGame(TestCase):
 
         a.play()
 
+        print(a.state)
+
         assert a.state == {p1: [('green', 'R'), ('green', '4')],
                            p2: [('yellow', '7'), ('yellow', '5')]}
 

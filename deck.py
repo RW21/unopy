@@ -29,7 +29,11 @@ class Deck:
         return str(self.cards)
 
     def draw(self):
-        return self.cards.pop(len(self.cards)-1)
+        try:
+            return self.cards.pop(len(self.cards)-1)
+
+        except IndexError:
+            print('No more cards')
 
     def shuffle(self):
         shuffle(self.cards)
